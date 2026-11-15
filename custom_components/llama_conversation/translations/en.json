@@ -483,7 +483,8 @@
                 "de": "German",
                 "fr": "French",
                 "es": "Spanish",
-                "pl": "Polish"
+                "pl": "Polish",
+                "ru": "Russian"
             }
         },
         "extra_headers": {

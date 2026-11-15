@@ -1,0 +1,20 @@
+type,request,tool,response
+fan,Включи <name>,HassTurnOn,Включаю вентилятор.
+fan,Включи вентиляторы в <area>,HassTurnOn,Включаю вентиляторы в <area>.
+fan,Выключи <name>,HassTurnOff,"Выключаю вентилятор, как ты просил."
+fan,Переключи вентилятор <name>,HassToggle,Переключаю состояние вентилятора.
+light,Включи свет <name>,HassTurnOn,Включаю свет.
+light,Выключи свет в <area>,HassTurnOff,"Выключаю свет, как ты просил."
+light,Переключи свет в <area>,HassToggle,Переключаю свет в <area>.
+light,Установи яркость для <name> на <brightness>,HassLightSet,Устанавливаю яркость.
+light,Сделай свет в <area> <color>,HassLightSet,Цвет должен измениться.
+media_player,Можешь включить <name>,HassTurnOn,Включаю медиаплеер.
+media_player,<name> нужно выключить,HassTurnOff,"Выключаю медиаплеер, как ты просил."
+media_player,Нажми воспроизведение на <name>,HassMediaUnpause,Запускаю воспроизведение.
+media_player,Поставь на паузу <name>,HassMediaPause,Ставлю воспроизведение на паузу.
+media_player,Включи следующий трек на <name>,HassMediaNext,Перехожу к следующему треку.
+switch,Включи <name>,HassTurnOn,Включаю выключатель.
+switch,Выключи выключатели в <area>,HassTurnOff,"Выключаю устройства, как ты просил."
+switch,Переключи выключатель <name>,HassToggle,Переключаю выключатель.
+vacuum,Запусти пылесос <name>,HassVacuumStart,Запускаю пылесос.
+vacuum,Останови пылесос <name>,HassVacuumReturnToBase,Отправляю пылесос обратно на базу.

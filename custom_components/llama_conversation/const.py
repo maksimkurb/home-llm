@@ -18,14 +18,16 @@ PERSONA_PROMPTS = {
     "de": "Du bist \u201eAl\u201c, ein hilfreicher KI-Assistent, der die Ger\u00e4te in einem Haus steuert. F\u00fchren Sie die folgende Aufgabe gem\u00e4\u00df den Anweisungen durch oder beantworten Sie die folgende Frage nur mit den bereitgestellten Informationen.",
     "fr": "Vous \u00eates \u00ab\u00a0Al\u00a0\u00bb, un assistant IA utile qui contr\u00f4le les appareils d'une maison. Effectuez la t\u00e2che suivante comme indiqu\u00e9 ou r\u00e9pondez \u00e0 la question suivante avec les informations fournies uniquement.",
     "es": "Eres 'Al', un \u00fatil asistente de IA que controla los dispositivos de una casa. Complete la siguiente tarea seg\u00fan las instrucciones o responda la siguiente pregunta \u00fanicamente con la informaci\u00f3n proporcionada.",
-    "pl": "Jeste\u015b 'Al', pomocnym asystentem AI, kt\u00f3ry kontroluje urz\u0105dzenia w domu. Wykonaj poni\u017csze zadanie zgodnie z instrukcj\u0105 lub odpowiedz na poni\u017csze pytanie, korzystaj\u0105c wy\u0142\u0105cznie z podanych informacji."
+    "pl": "Jeste\u015b 'Al', pomocnym asystentem AI, kt\u00f3ry kontroluje urz\u0105dzenia w domu. Wykonaj poni\u017csze zadanie zgodnie z instrukcj\u0105 lub odpowiedz na poni\u017csze pytanie, korzystaj\u0105c wy\u0142\u0105cznie z podanych informacji.",
+    "ru": "Ты — «Ал», полезный ИИ-ассистент, который управляет устройствами в доме. Выполни следующую задачу согласно инструкции или ответь на следующий вопрос, используя только предоставленную информацию."
 }
 CURRENT_DATE_PROMPT = {
     "en": """The current time and date is {{ (as_timestamp(now()) | timestamp_custom("%I:%M %p on %A %B %d, %Y", True, "")) }}""",
     "de": """{% set day_name = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"] %}{% set month_name = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"] %}Die aktuelle Uhrzeit und das aktuelle Datum sind {{ (as_timestamp(now()) | timestamp_custom("%H:%M", local=True)) }} {{ day_name[now().weekday()] }}, {{ now().day }} {{ month_name[now().month -1]}} {{ now().year }}.""",
     "fr": """{% set day_name = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"] %}{% set month_name = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"] %} L'heure et la date actuelles sont {{ (as_timestamp(now()) | timestamp_custom("%H:%M", local=True)) }} {{ day_name[now().weekday()] }}, {{ now().day }} {{ month_name[now().month -1]}} {{ now().year }}.""",
     "es": """{% set day_name = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"] %}{% set month_name = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"] %}La hora y fecha actuales son {{ (as_timestamp(now()) | timestamp_custom("%H:%M", local=True)) }} {{ day_name[now().weekday()] }}, {{ now().day }} de {{ month_name[now().month -1]}} de {{ now().year }}.""",
-    "pl": """{% set day_name = ["poniedziałek", "wtorek", "środę", "czwartek", "piątek", "sobotę", "niedzielę"] %}{% set month_name = ["styczeń", "luty", "marzec", "kwiecień", "maj", "czerwiec", "lipiec", "sierpień", "wrzesień", "październik", "listopad", "grudzień"] %}Aktualna godzina i data to {{ (as_timestamp(now()) | timestamp_custom("%H:%M", local=True)) }} w {{ day_name[now().weekday()] }}, {{ now().day }} {{ month_name[now().month -1]}} {{ now().year }}."""
+    "pl": """{% set day_name = ["poniedziałek", "wtorek", "środę", "czwartek", "piątek", "sobotę", "niedzielę"] %}{% set month_name = ["styczeń", "luty", "marzec", "kwiecień", "maj", "czerwiec", "lipiec", "sierpień", "wrzesień", "październik", "listopad", "grudzień"] %}Aktualna godzina i data to {{ (as_timestamp(now()) | timestamp_custom("%H:%M", local=True)) }} w {{ day_name[now().weekday()] }}, {{ now().day }} {{ month_name[now().month -1]}} {{ now().year }}.""",
+    "ru": """{% set day_name = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"] %}{% set month_name = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"] %}Текущее время и дата: {{ (as_timestamp(now()) | timestamp_custom("%H:%M", local=True)) }}, {{ day_name[now().weekday()] }}, {{ now().day }} {{ month_name[now().month -1]}} {{ now().year }}"""
 }
 DEVICES_PROMPT = {
     "en": "Devices",
@@ -33,6 +35,7 @@ DEVICES_PROMPT = {
     "fr": "Appareils",
     "es": "Dispositivos",
     "pl": "Urządzenia",
+    "ru": "Устройства"
 }
 SERVICES_PROMPT = {
     "en": "Services",
@@ -40,6 +43,7 @@ SERVICES_PROMPT = {
     "fr": "Services",
     "es": "Servicios",
     "pl": "Usługi",
+    "ru": "Сервисы"
 }
 TOOLS_PROMPT = {
     "en": "Tools",
@@ -47,6 +51,7 @@ TOOLS_PROMPT = {
     "fr": "Outils",
     "es": "Herramientas",
     "pl": "Narzędzia",
+    "ru": "Инструменты"
 }
 AREA_PROMPT = {
     "en": "Area",
@@ -54,13 +59,15 @@ AREA_PROMPT = {
     "fr": "Zone",
     "es": "Área",
     "pl": "Obszar",
+    "ru": "Область"
 }
 USER_INSTRUCTION = {
     "en": "User instruction",
     "de": "Benutzeranweisung",
     "fr": "Instruction de l'utilisateur ",
     "es": "Instrucción del usuario",
-    "pl": "Instrukcja użytkownika"
+    "pl": "Instrukcja użytkownika",
+    "ru": "Инструкция пользователя"
 }
 DEFAULT_PROMPT_BASE = """<persona>
 <devices>:
@@ -137,7 +144,7 @@ DEFAULT_BACKEND_TYPE = BACKEND_TYPE_LLAMA_CPP
 CONF_BASE_URL = "base_url"
 CONF_INSTALLED_LLAMACPP_VERSION = "installed_llama_cpp_version"
 CONF_SELECTED_LANGUAGE = "selected_language"
-CONF_SELECTED_LANGUAGE_OPTIONS = [ "en", "de", "fr", "es", "pl"]
+CONF_SELECTED_LANGUAGE_OPTIONS = [ "en", "de", "fr", "es", "pl", "ru"]
 CONF_DOWNLOADED_MODEL_QUANTIZATION = "downloaded_model_quantization"
 CONF_DOWNLOADED_MODEL_QUANTIZATION_OPTIONS = [
     "Q4_0", "Q4_1", "Q5_0", "Q5_1", "IQ2_XXS", "IQ2_XS", "IQ2_S", "IQ2_M", "IQ1_S", "IQ1_M",
